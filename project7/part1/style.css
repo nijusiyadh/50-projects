@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.playstation,
+.xbox {
+  flex-basis: 50%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s ease;
+}
+
+.playstation {
+  background: url(pexels-fox-58267-13189290.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.xbox {
+  background: url(pexels-inspiredimages-139038.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.layout-ps {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(137, 43, 226, 0.199);
+}
+
+.layout-xb {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.767);
+}
+
+.ps-content,
+.xbox-content {
+  display: block;
+  text-align: center;
+  z-index: 4;
+}
+
+.ps-content h1,
+.xbox-content h1 {
+  color: white;
+  font-size: 50px;
+  margin: 10px;
+}
+
+.ps-btn,
+.xbox-btn {
+  background: transparent;
+  color: white;
+  padding: 10px 30px;
+  font-size: 18px;
+  border: 1px solid white;
+  margin-top: 20px;
+}
+
+.active {
+  flex-basis: 100%;
+  transition: 1s ease;
+}
+.ps-btn:hover {
+    background-color: steelblue;
+    border-color: steelblue;
+    color: white;
+}
+
+
+.xbox-btn:hover {
+    background-color: darkgreen;
+    border-color: darkgreen;
+    color: white;
+}

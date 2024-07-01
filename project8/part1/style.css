@@ -1,0 +1,137 @@
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: steelblue;
+}
+
+.form {
+    background-color: rgb(51, 103, 146);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    border-radius: 5px;
+    padding: 20px;
+    position: relative;
+    
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 34px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.email-input, .pas-input {
+    width: 100%;
+    height: 50px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: flex-end;
+}
+
+.email-input input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    padding: 4px 8px;
+    color: white;
+}
+
+.email-input input:focus {
+    outline: none;
+    border: none;
+}
+
+.email-input input:active {
+    outline: none;
+    border: none;
+}
+
+.pas-input input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    padding: 4px 8px;
+    color: white;
+}
+
+.pas-input input:focus {
+    outline: none;
+    border: none;
+}
+
+.pas-input input:active {
+    outline: none;
+    border: none;
+}
+
+.email-input,.pas-input label {
+    color: white;
+    display: flex;
+    gap: 2px;
+    font-weight: 500;
+}
+
+.login-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px ;
+    font-size: 20px;
+    border-radius: 8px;
+    background-color: steelblue;
+    border: none;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+.register {
+    margin-top: 40px;
+    color: white;
+
+}
+
+.register-link {
+    text-decoration: none;
+    color: lightblue;
+}
+
+.email-input label, .pas-input label {
+    position: absolute;
+    top: 10px;
+    transition: 0.4s ease;
+}
+
+.active label{
+    top: 0px;
+    transition: 0.4s ease;
+}
+
+.active label span {
+    transition-delay: 1s;
+}

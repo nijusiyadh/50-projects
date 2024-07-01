@@ -1,0 +1,105 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-bar {
+    display: block;
+}
+
+.indicator {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.numbers {
+    border: 2px solid lightgray;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.divider {
+    height: 3px;
+    flex: 1;
+    background-color: lightgray;
+}
+
+.active-number {
+    transition: border-color 0.5s ease-in 0.6s;
+    border-color: rgb(0, 89, 255);
+}
+
+
+
+.progress-loader {
+    position: absolute;
+    width: 0px;
+    height: 4px;
+    background-color: rgb(0, 89, 255);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+    transition: 1s ease;
+}
+
+.indicator::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: lightgray;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+button {
+    cursor: pointer;
+    padding: 7px 25px;
+    color: white;
+    background: rgb(17, 134, 212);
+    border-radius: 7px;
+    border: none;
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+.inactive {
+    background-color: lightgray;
+}

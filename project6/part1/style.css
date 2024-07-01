@@ -1,0 +1,61 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+.container {
+    width: 100vw;
+    display: flex;
+    
+    padding: 20px 30px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+
+.scroll-containers {
+    width: 400px;
+    
+}
+
+.scroll-element {
+    width: 100%;
+    height: 200px;
+    background-color: rgba(9, 105, 194, 0.623);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transform: translateX(200%);
+    transition: 1s;
+}
+
+.scroll-element:nth-of-type(even) {
+    transform: translateX(-200%);
+    transition: 1s;
+    
+}
+
+.scroll-element.show {
+    transform: translateX(0);
+    transition: 1s;
+}
+
+.scroll-element h2 {
+    font-size: 30px;
+    color: white;
+}
+

@@ -1,0 +1,211 @@
+:root {
+  --primary-color: #1e1e5e;
+  --secondary-color: #283c84c0;
+  --blue-cobalt: #0047ab;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;posterURL
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+  background-color: var(--primary-color);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+  padding-bottom: 40px;
+}
+
+header {
+  width: 100%;
+  background-color: var(--secondary-color);
+  padding: 17px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.4);
+}
+
+.search input {
+  background-color: transparent;
+  padding: 8px 20px;
+  color: white;
+  border: 2px solid #1d6ee0;
+  font-size: 17px;
+  border-radius: 80px;
+}
+
+.search input:focus {
+    border-color: white;
+}
+
+.search input::placeholder {
+  color: rgba(255, 255, 255, 0.695);
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  overflow-y: scroll;
+}
+
+main::-webkit-scrollbar {
+    display: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: auto;
+  gap: 18px;
+  padding-bottom: 20px;
+}
+
+
+.movie-card {
+  width: 100%;
+  background-color: var(--secondary-color);
+  min-height: 400px;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.movie-card:hover {
+    transform: scale(0.99);
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.4);
+}
+
+
+.image {
+  width: 100%;
+  height: 330px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image img {
+    width: 100%;
+  object-fit: cover;
+}
+
+.content {
+  padding: 10px 20px;
+  font-size: 14px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text {
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+  text-align: left;
+  font-weight: 500;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serifs;
+}
+
+.rating {
+  /* color: rgb(225, 102, 57); */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 800;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+}
+
+
+.overView {
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    height: 0;
+    color: black;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 30px 20px;
+    bottom: -100%;
+    flex-direction: column;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    /* opacity: 0; */
+    transition: height 0.6s ease;
+}
+
+.overView h4 {
+    font-size: 17px;
+    margin: 10px 0;
+    /* opacity: 0; */
+}
+
+.overView p {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    padding-right: 10px;
+    /* opacity: 0; */
+}
+
+.movie-card.show .overView{
+    height: fit-content;
+    bottom: 0;
+    transition: bottom 0.8s ease
+    /* opacity: 1; */
+}
+
+/* .movie-card.show .overView h4 {
+    opacity: 1;
+    transition:  opacity 0.5s ease;
+}
+
+.movie-card.show .overView  p {
+    opacity: 1;
+    transition:  opacity 0.5s ease;
+} */
+
+@media screen and (max-width: 1800px) {
+  .grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

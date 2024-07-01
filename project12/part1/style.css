@@ -1,0 +1,109 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f0f0f0;
+
+}
+
+h1 {
+    margin: 50px 0 30px;
+    text-align: center;
+}
+
+.viewCard {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.content {
+    background-color: transparent;
+    border: 1px solid #9fa4a8;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+
+}
+
+.content.active {
+    background-color: white;
+    
+    transition: 0.5s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1),0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content.active::before,.content.active::after {
+    content: '\f075';
+    font-family: 'Font Awesome 5 free';
+    color: #2ecc71;
+    font-size: 7rem;
+    position: absolute;
+    opacity: 0.2;
+    top: 20px;
+    left: 20px;
+    z-index: 0;
+}
+
+.content.active::before {
+    color: #3498bd;
+    top: -10px;
+    left: -30px;
+    transform: rotateY(180deg);
+}
+
+.content h3 {
+    margin: 0 35px 0 0;
+}
+
+.content-text {
+    margin: 30px 0 0;
+    display: none;
+}
+
+.content.active .content-text {
+    display: block;
+    transition: 0.5s ease;
+}
+
+.content-btn {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+
+}
+.content-btn:focus, .content-btn:active {
+    outline: none;
+}
+
+.content-btn .fa-times {
+    display: none;
+}
+
+.content.active .content-btn .fa-times {
+    display: block;
+}
+
+.content.active .content-btn .fa-chevron-down {
+    display: none;
+    transition: 0.5s ease;
+}
+
+.content.active .content-btn {
+    background-color: lightgray;
+    border-radius: 50%;
+    color: white;
+    transition: 0.5s ease;
+}
