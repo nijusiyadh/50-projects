@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.countdown {
+  padding: 20px;
+  background-color: rgba(112, 128, 144, 0.178);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 200px;
+}
+
+.counter,
+.go {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+}
+
+.text {
+  font-size: 50px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.go-btn {
+  border: none;
+  outline: none;
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: slateblue;
+  border-radius: 5px;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+.ready-text {
+  font-size: 24px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  /* margin-top: 10px; */
+}
+
+.count {
+  font-size: 50px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 800;
+  animation: slide 1s ease-in-out;
+}
+
+.count-display {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: rotate(90deg) translateY(-40px) translateX(70px);
+  }
+  40% {
+    opacity: 100;
+    transform: rotate(-5deg) translateY(0px) translateX(-10px);
+    /* opacity: 100;
+    transform: rotate(0) translateX(0) translateY(0); */
+  }
+  50% {
+    opacity: 100;
+    transform: rotate(5deg) translateY(0px) translateX(10px);
+  }
+  /* 50% {
+    opacity: 100;
+    transform: rotate(-5deg) translateY(0px) translateX(-10px);
+  } */
+  55% {
+    opacity: 100;
+    transform: rotate(0) translateX(0) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(-90deg) translateY(-40px) translateX(-70px);
+  }
+}

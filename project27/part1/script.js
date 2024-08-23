@@ -1,38 +1,25 @@
-const button = document.getElementById("button");
 
-const toasts = document.getElementById("toasts");
 
-const messages = [
-  "message One",
-  "message two",
-  "message three",
-  "message four",
-  "message five",
-];
+const toasts = document.querySelector('.toasts');
+const btn = document.querySelector('.btn');
 
-const types =[
-    'info','success','error'
-];
+const messages = ['toast 1','toast 2','toast 3'];
+const color = ['red','green','blue'];
 
-button.addEventListener("click",() => createNotification('This is invalid data'));
+btn.addEventListener('click', showToast);
 
-function createNotification(message = null,tyle = null) {
-  const notif = document.createElement("div");
-  notif.classList.add("toast");
-  notif.classList.add(tyle ? tyle : getRandomType());
-  notif.innerHTML = message ? message : getRandomMessage();
-  toasts.appendChild(notif);
+function showToast() {
+    const toast = document.createElement('div');
+    toast.classList.add('toast');
+    toast.innerHTML = getRandom(messages);
+    toast.style.color = getRandom(color);
+    toasts.appendChild(toast);
 
-  setTimeout(() => {
-    notif.remove();
-  }, 3000);
+    setTimeout(() => {
+        toast.remove();
+    }, 3000);
 }
 
-function getRandomMessage() {
-  return messages[Math.floor(Math.random() * messages.length)];
-}
-
-
-function getRandomType() {
-    return types[Math.floor(Math.random() * types.length)]
+function getRandom(value) {
+    return value[Math.floor(Math.random() * value.length)];
 }
