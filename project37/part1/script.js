@@ -63,3 +63,9 @@ const createPokemonCard = (pokemon) => {
 };
 
 fetchPokemons();
+
+
+/**
+ 
+ *
+ */
